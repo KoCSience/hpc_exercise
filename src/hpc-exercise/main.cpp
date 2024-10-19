@@ -861,9 +861,9 @@ int main(const int argc, const char** argv)
 
 #ifdef EX9
 	//課題9
-	//intの行列を整数で2倍，浮動小数点で2.f倍,整数を１ビットだけビットシフトすることで2倍する場合の計算速度を比較せよ．
-	//また，intの行列を整数で2で除算する場合，浮動小数点で2で除算する場合，浮動小数点の0.5で乗算する場合，１ビットだけビットシフトすることで1/2倍する場合の速度を比較せよ．
-	//加えて，floatの行列で，2.0で除算する場合と0.5で乗算する場合を比較せよ．
+	//intの行列を整数で2倍，浮動小数点で2.0f倍,整数を1ビットだけビットシフトすることで2倍する場合の計算速度を比較せよ．
+	//また，intの行列を整数で2で除算する場合，浮動小数点で2で除算する場合，浮動小数点の0.5で乗算する場合，1ビットだけビットシフトすることで1/2倍する場合の速度を比較せよ．
+	//加えて，floatの行列で，2.0fで除算する場合と0.5fで乗算する場合を比較せよ．
 	//なお，浮動小数点で乗算する場合は整数の場合よりも遅い． 
 	//また，大きい行列サイズでないと，効果がでない場合がある．
 	if (exercise == 9)
@@ -905,7 +905,7 @@ int main(const int argc, const char** argv)
 		//2.0x mul
 		for (int k = 0; k < loop; k++)
 		{
-			//2.f倍 乗算(float)
+			//2.0f倍 乗算(float)
 			t.start();
 			const int size = ret_32s.cols * ret_32s.rows;
 			for (int i = 0; i < size; i++)
@@ -974,7 +974,7 @@ int main(const int argc, const char** argv)
 		}
 		std::cout << "|0.5 mul(64F)|" << t.getAvgTime() << "|" << std::endl;
 
-		//1/2->bit shift
+		//1/2 -> bit shift
 		for (int k = 0; k < loop; k++)
 		{
 			//1/2 ビットシフト
@@ -999,7 +999,7 @@ int main(const int argc, const char** argv)
 		//1/2 div
 		for (int k = 0; k < loop; k++)
 		{
-			//1/2.f 除算
+			//1/2.0f 除算
 			t.start();
 			const int size = ret_32f.cols * ret_32f.rows;
 			for (int i = 0; i < size; i++)
