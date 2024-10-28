@@ -2155,7 +2155,7 @@ int main(const int argc, const char** argv)
 #endif
 #ifdef EX17
 	//課題17
-	//Mat_32Sの配同士の加算(a=a+b)をループつぶしをするか否かで計算時間を比較せよ．
+	//Mat_32Sの配列同士の加算(a=a+b)をループつぶしをするか否かで計算時間を比較せよ．
 	if (exercise == 17)
 	{
 		//空欄埋め問題
