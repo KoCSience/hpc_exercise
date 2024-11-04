@@ -1465,7 +1465,7 @@ int size = width*height;
 for (int n = 0; n < size; n++)
 {
    int j = n/width;
-   int i= n%width;
+   int i = n%width;
    a[j][i] = i+j;
 }
 ```
